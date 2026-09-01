@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu' # 关键：必须指定发行版，这里推荐使用 zulu 兼容性最好
-          java-version: '1.8'  # 保持你需要的 Java 8 (1.8)
+          java-version: '8'  # 保持你需要的 Java 8 (8)
 
       - id: get-project
         name: Get project name
