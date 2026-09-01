@@ -12,7 +12,9 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v5
         with:
-          java-version: 1.8
+          distribution: 'zulu' # 关键：必须指定发行版，这里推荐使用 zulu 兼容性最好
+          java-version: '1.8'  # 保持你需要的 Java 8 (1.8)
+
       - id: get-project
         name: Get project name
         run: echo "::set-output name=PROJECT::$(cat project-to-build)"
